@@ -1,0 +1,126 @@
+.showcase-details-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15vh;
+    padding-top: 10vh;
+   
+}
+
+.showcase-section {
+    width: calc(100% - 35vw) ;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    opacity: 0;
+    transform: translateY(0px);
+    background: var(--gray9) !important;
+}
+
+.showcase-full-image-section {
+    background: linear-gradient(to top, var(--gray8),var(--gray9));
+
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    video {
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.showcase-two-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5vw;
+}
+
+.showcase-image-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.showcase-image-info-content {
+    width: 50%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    padding: 0 4rem;
+
+    video {
+        object-fit: cover;
+        width: 100%;
+        border-radius: var(--radius);
+    }
+}
+
+.bento-parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    
+    gap: 5vw; /* Adjust as needed for spacing */
+  }
+
+  .bento-child {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    align-items: flex-start;
+    border-radius: var(--radius);
+  }
+
+  .bento-child caption {
+    text-align: left;
+  }
+
+  .bento-child-image {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--gray8);
+    border: 1px solid var(--gray6);
+    border-radius: var(--radius);
+  }
+
+  .bento-child img {
+    width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: var(--radius);
+  }
+  
+  .bento-child:nth-child(1) {
+    grid-column: span 7 /* First column */
+  }
+  
+  .bento-child:nth-child(2) {
+    grid-column: span 5; /* Second column */
+  }
+  
+  .bento-child:nth-child(3),
+  .bento-child:nth-child(4) {
+    grid-column: span 6; /* Each takes half of the row */
+  }
+  
+  .bento-child:nth-child(5) {
+    grid-column: span 5; /* First column */
+  }
+  
+  .bento-child:nth-child(6) {
+    grid-column: span 7; /* Second column */
+  }
+  
+  .qubedo-video {
+    width: 80%;
+    padding: 0 10vw;
+    margin: 0 auto;
+
+    video {
+      border-radius: var(--radius);
+    }
+  }

@@ -1,0 +1,21 @@
+@import '../../styles/index.css';
+
+.eyebrow-outer {
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.eyebrow-indicator {
+    width: 0.85rem;
+    height: 0.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+}
+
+.eyebrow-outer h5 {
+    font-weight: 600;
+    letter-spacing: -0.2px;
+}

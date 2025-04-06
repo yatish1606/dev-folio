@@ -1,0 +1,22 @@
+@import '../../styles/index.css';
+
+.card-spotlight-effect {
+    position: relative;
+    overflow: hidden;
+    /* background-image: linear-gradient(to right, #0f172a, #06171b); */
+    background-image: linear-gradient(to bottom, var(--gray7), var(--gray8));
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+  
+.spotlight {
+    pointer-events: none;
+    position: absolute;
+    inset: -1px;
+    opacity: 0;
+    transition: opacity 300ms;
+}
+  
+  

@@ -1,0 +1,372 @@
+@import './common.css';
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@500,600&display=swap");
+
+:root {
+  --white: rgb(255, 255, 255);
+  --gray0: rgb(230, 231, 233); 
+  --gray1: rgb(200, 202, 205); 
+  --gray2: rgb(155, 158, 162); 
+  --gray3: rgb(136, 141, 145); 
+  --gray4: rgb(95, 98, 102);   
+  --gray5: rgb(75, 77, 80);    
+  --gray6: rgb(37, 39, 42);    
+  --gray7: #1b1c1e;    
+  --gray8: rgb(16, 17, 20);   
+  --gray9: #060909; 
+  --gray10: #03070a;
+
+  /* --gray10: rgba(248, 246, 242, .9);
+  --gray9: rgb(245, 246, 249); 
+  --gray8: rgb(226, 228, 230); 
+  --gray7: rgb(217, 219, 221); 
+  --gray6: rgb(190, 193, 195); 
+  --gray5: rgb(161, 164, 169);   
+  --gray4: rgb(117, 119, 121);    
+  --gray3: rgb(56, 57, 60);    
+  --gray2: rgb(36, 37, 38);    
+  --gray1: rgb(16, 17, 20);   
+  --gray0: rgb(8, 12, 12);  */
+
+
+  --primary: rgb(47, 143, 239);
+  --primary-hover: rgb(3, 129, 255);
+  --purple: rgb(80, 72, 229);
+  --indigo: rgb(14, 165, 229);
+
+  --radius: 12px;
+  --radius-lg: 16px;
+
+  --line-height-tight: 1.4;
+  --line-height-normal: 1.75;
+  --line-height-loose: 1.75;
+  --letter-spacing-normal: -0.125px;
+  --letter-spacing-wide: 0.15px;
+  --letter-spacing-close: -0.5px;
+
+  --side-padding: 20vw;
+  --side-padding-sm: min(400px, 25vw);
+}
+
+::selection {
+  background-color: #f6d119d6;
+  color: var(--gray8);
+}
+::-moz-selection {
+  background-color: #f6d119d6;
+  color: var(--gray8);
+}
+
+
+@font-face {
+  font-family: SFProDisplayRegular;
+  src: url('../assets/fonts/SF-Pro-Display-Regular.otf');
+}
+
+@font-face {
+  font-family: SFProDisplayMedium;
+  src: url('../assets/fonts/SF-Pro-Display-Medium.otf');
+}
+
+@font-face {
+  font-family: SFProDisplaySemibold;
+  src: url('../assets/fonts/SF-Pro-Display-Semibold.otf');
+}
+
+@font-face {
+  font-family: SFPro;
+  src: url('../assets/fonts/SF-Pro-Text-Light.otf');
+}
+
+@font-face {
+  font-family: SFProMedium;
+  src: url('../assets/fonts/SF-Pro-Text-Regular.otf');
+}
+
+
+h1, h2, h3, h4, h5, h6, p, label, small {
+  margin: 0; 
+  padding: 0;
+  text-align: left;
+  color: var(--gray3);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "General Sans", sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: var(--line-height-tight);
+  letter-spacing: calc(var(--letter-spacing-normal) - 0.75px);
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: var(--line-height-tight);
+  letter-spacing: alc(var(--letter-spacing-normal) - 0.25px);
+}
+
+h3 {
+  font-size: 2.5rem;
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+h4 {
+  font-size: 2rem;
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+h5 {
+  font-size: 1.45rem;
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1.15rem;
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-wide);
+  font-weight: 500;
+}
+
+p {
+  font-size: 0.95rem;
+  line-height: var(--line-height-loose);
+  letter-spacing: var(--letter-spacing-normal);
+  font-family: "SFPro", sans-serif;
+  font-weight: 500;
+}
+p.large-text {
+  font-size: 1rem;
+  line-height: var(--line-height-loose);
+  letter-spacing: var(--letter-spacing-close);
+  font-family: "SFProMedium", sans-serif;
+  font-weight: 500;
+}
+p.small-text {
+  font-size: 0.885rem;
+  line-height: var(--line-height-loose);
+  letter-spacing: var(--letter-spacing-normal);
+  font-family: "SFPro", sans-serif;
+  font-weight: 500;
+}
+
+b {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: var(--gray0);
+}
+
+label {
+  font-size: 1.125rem;
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+small, caption {
+  font-size: 0.85rem;
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+sup {
+  font-size: 80% !important;
+}
+
+.bg-gray0 {
+  background-color: var(--gray0);
+}
+
+.bg-gray1 {
+  background-color: var(--gray1);
+}
+
+.bg-gray2 {
+  background-color: var(--gray2);
+}
+
+.bg-gray3 {
+  background-color: var(--gray3);
+}
+
+.bg-gray4 {
+  background-color: var(--gray4);
+}
+
+.bg-gray5 {
+  background-color: var(--gray5);
+}
+
+.bg-gray6 {
+  background-color: var(--gray6);
+}
+
+.bg-gray7 {
+  background-color: var(--gray7);
+}
+
+.bg-gray8 {
+  background-color: var(--gray8);
+}
+
+.bg-gray9 {
+  background-color: var(--gray9);
+}
+
+.text-gray0 {
+  color: var(--gray0);
+}
+
+.text-gray1 {
+  color: var(--gray1);
+}
+
+.text-gray2 {
+  color: var(--gray2);
+}
+
+.text-gray3 {
+  color: var(--gray3);
+}
+
+.text-gray4 {
+  color: var(--gray4);
+}
+
+.text-gray5 {
+  color: var(--gray5);
+}
+
+.text-gray6 {
+  color: var(--gray6);
+}
+
+.text-gray7 {
+  color: var(--gray7);
+}
+
+.text-gray8 {
+  color: var(--gray8);
+}
+
+.text-gray9 {
+  color: var(--gray9);
+}
+
+.text-centre {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+ul {
+  padding-inline-start: 1rem;
+}
+
+li {
+  font-size: 0.975rem;
+  line-height: var(--line-height-loose);
+  letter-spacing: var(--letter-spacing-normal);
+  font-family: "SFPro";
+  color: inherit;
+}
+
+
+a, .link , .link *{
+  color: var(--gray0);
+  font-family: inherit;
+  /* font-weight: 700; */
+  font-size: inherit;
+  text-decoration: none;
+  text-underline-offset: 10%;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+a.underline, .underline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  width: fit-content;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+}
+
+button.primary {
+  background-color: var(--gray0);
+  color: var(--gray8);
+  font-size: 0.9rem;
+  line-height: var(--line-height-loose);
+  letter-spacing: var(--letter-spacing-wide);
+  font-family: "SFProDisplayRegular";
+  font-weight: 500;
+}
+
+.bold, b, strong {
+  font-family: "SFProMedium";
+  letter-spacing: calc(var(--letter-spacing-normal) + 0.1px);
+}
+
+.flex-row-wrap {
+  flex-wrap: wrap;
+}
+
+
+i {
+  font-size: 100%;
+}
+
+@media screen and (max-width: 520px) {
+  :root {
+    --side-padding: 24px;
+    --side-padding-sm: 24px;
+    --letter-spacing-normal: -0.2px;
+    --showcase-modal-padding: 20px;
+  }
+
+  p {
+    font-size: 0.925rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h5 {
+    font-size: 1.35rem;
+  }
+
+  caption {
+    text-align: left;
+  }
+  .bold, b, strong {
+    font-family: "SFPro";
+    font-weight: 500;
+    letter-spacing: inherit;
+  }
+
+  p.large-text {
+    font-size: 0.925rem;
+  }
+
+  a {
+    /* letter-spacing: var(--letter-spacing-normal); */
+  }
+
+  .link {
+    letter-spacing: var(--letter-spacing-normal);
+  }
+}

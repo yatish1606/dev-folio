@@ -1,0 +1,69 @@
+.tooltip-container {
+    display: inline-flex;
+    gap: 0px;
+  }
+  
+  .tooltip-item {
+    position: relative;
+    margin-right: -6px;
+  }
+  
+  .tooltip-content {
+    position: absolute;
+    top: -5rem;
+    left: -150%;
+    /* transform: translateX(-50%); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--gray8);
+    border: 1px solid var(--gray6);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 50;
+  }
+  
+  .tooltip-gradient {
+    position: absolute;
+    bottom: -1px;
+    height: 2px;
+    width: 40%;
+  }
+  
+  .gradient-emerald {
+    background: linear-gradient(to right, transparent, #00c853, transparent);
+  }
+  
+  .gradient-sky {
+    background: linear-gradient(to right, transparent, #03a9f4, transparent);
+  }
+  
+  .tooltip-name {
+    font-family: "General Sans";
+    color: var(--gray1);
+    font-size: 14px !important;
+    z-index: 30;
+    line-height: 120% !important;
+  }
+  
+  .tooltip-designation {
+    color: var(--gray3);
+    font-size: 12px;
+  }
+  
+  .tooltip-image {
+    width: 1.75rem;
+    height: 1.754rem;
+    background-size: cover;
+    background-position: top;
+    border-radius: 50%;
+    border: 2px solid var(--gray6);
+    transition: transform 0.5s ease, z-index 0.5s ease;
+  }
+  
+  .tooltip-item:hover .tooltip-image {
+    transform: scale(1.4);
+    z-index: 30;
+  }
+  

@@ -1,0 +1,25 @@
+@import '../../styles/index.css';
+
+.hero, .portfolio-section, .portfolio-section-large {
+    padding: 5vh var(--side-padding-sm);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 5vh;
+    padding-bottom: 0;
+}
+
+.portfolio-section {
+    gap: 1rem;
+}
+
+.portfolio-section-large {
+padding: 0vh var(--side-padding);
+}
+
+@media screen and (max-width: 520px) {
+    .hero, .portfolio-section, .portfolio-section-large {
+        padding: .5rem var(--side-padding-sm);
+    }
+}

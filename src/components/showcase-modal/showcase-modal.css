@@ -1,0 +1,312 @@
+:root {
+    --showcase-modal-padding: 1rem;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0000009a;
+    min-height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 100;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    padding: var(--showcase-modal-padding);
+    min-width: 100vw;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.carousel-status {
+    display: none;
+}
+
+.carousel .slider-wrapper.axis-horizontal .slider {
+    width: 100vw;
+}
+
+.carousel .slider-wrapper.axis-horizontal .slider {
+    /* gap: max(3vw, 50px); */
+}
+
+.slide {
+    width: calc(100vw - 2 * var(--showcase-modal-padding) );
+    box-sizing: border-box;
+    height: calc(100vh - 2 * var(--showcase-modal-padding));
+    /* background-color: green; */
+    /* min-width: unset !important; */
+    padding: 1rem;
+}
+
+.modal-outer {
+    width: calc(100vw - 2 * var(--showcase-modal-padding) - 2rem);
+    box-sizing: border-box;
+    height: calc(100vh - 2 * var(--showcase-modal-padding) - 2rem);
+    background-color: var(--gray9);
+    border: 2px solid var(--gray6);
+    border-radius: calc(var(--radius-lg) * 2);
+    overflow: hidden;
+}
+
+.modal {
+    width: calc(100vw - 2 * var(--showcase-modal-padding) - 2rem);
+    box-sizing: border-box;
+    height: calc(100vh - 2 * var(--showcase-modal-padding));
+    background-color: var(--gray9);
+    padding: 12vh 0;
+    position: relative;
+    overflow-y: scroll;
+    padding-top: 0;
+}
+
+.modal-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+
+.floating-parent {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+}
+
+.floating-buttons {
+    position: sticky;
+    top: 2rem;
+    left: 2rem;
+    width: calc(100vw - 2 * var(--showcase-modal-padding) - 2rem - 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.floating-button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gray6);
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+    background-color: #0000009a;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.floating-button.long {
+    width: unset;
+    padding: 0.5rem 1.25rem;
+    height: unset;
+}
+
+.floating-button.long:hover {
+    background-color: var(--gray0);
+}
+
+.floating-button:hover {
+    background-color: var(--gray7) !important;
+    transition: 200ms ease-in-out;
+}
+
+
+.floating-button svg {
+    stroke: var(--gray2);
+}
+
+.floating-buttons .flex-row {
+    width: unset;
+}
+
+.showcase-title {
+    width: 60%;
+    margin: 10vh auto 2rem auto;
+}
+
+.showcase-title h4 {
+    text-align: center;
+}
+
+.showcase-main-image {
+    width: calc(100% - 4rem);
+    border-radius: var(--radius);
+    min-height: 25vh;
+    position: relative;
+    background-color: var(--gray7);
+    margin: 0 2rem;
+    box-sizing: border-box;
+}
+
+.showcase-main-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mask-image: linear-gradient(
+    to right,
+    var(--gray8) 10%,         /* Full blur on the left */
+    transparent 50%,   /* No blur in the center */
+    var(--gray8) 10%          /* Full blur on the right */
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black 10%,         
+    transparent 50%,  
+    black 80%         
+  );
+
+  /* Apply blur and dark overlay */
+  /* backdrop-filter: blur(10px); */
+  background: rgba(0, 0, 0, 0.5); /* Slight darkening */
+}
+.showcase-main-image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.showcase-footer {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding-bottom: 10vh;
+}
+
+.showcase-footer .flex-row {
+    justify-content: center;
+}
+
+.showcase-footer-keyword {
+    padding: 0.5rem 0.75rem;
+    border-radius: calc(var(--radius)/2);
+    border: 1px solid var(--gray6);
+    font-size: 0.875rem;
+    color: var(--gray2);
+    font-family: "SFPro";
+    white-space: nowrap;
+}
+
+.showcase-header-info {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 520px) {
+    .modal-overlay {
+        padding: 0 0 0 0;
+        border-radius: 0;
+    }
+    .modal {
+        border-radius: 0;
+        width: 100%;
+        border: none;
+        padding: 2rem var(--showcase-modal-padding);
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 100%;
+    }
+
+    .showcase-title {
+        margin: 3rem 0 1.5rem 0;
+        align-items: flex-start;
+        width: 100%;
+        .text-centre {
+            text-align: left !important; 
+        }
+    }
+    .showcase-details-section {
+        gap: 2rem !important;
+        padding-top: 5vh !important;
+    }
+    .showcase-header-info {
+        flex-direction: column;
+    }
+    .showcase-section {
+        width: 100% !important;
+        padding-top: 1.5rem;
+        border-top: 0.5px solid var(--gray6);
+    }
+    .info-card-container {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    .floating-buttons {
+        width: calc(100%) !important;
+        top: var(--showcase-modal-padding) !important;
+        left: var(--showcase-modal-padding) !important;
+    }
+    .floating-button {
+        width: fit-content;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        padding: 0.25rem 0.75rem;
+        color: var(--gray3);
+    }
+    .showcase-header-info {
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .info-card h5 {
+        font-size: 1rem !important;
+        font-weight: 500;
+        letter-spacing: var(--letter-spacing-wide);
+    }
+
+    .bento-parent {
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 2.5rem;
+    }
+    .bento-child {
+        grid-column: unset !important;
+    }
+
+    .showcase-footer {
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        padding-top: 1rem;
+    }
+
+    .showcase-footer h6 {
+        font-size: 0.9rem;
+    }
+
+    .showcase-footer p {
+        font-size: 0.8rem;
+    }
+
+    .showcase-footer .flex-row {
+        justify-content: flex-start;
+    }
+
+    .showcase-footer-keyword {
+        font-size: 0.75rem;
+    }
+
+    .slide {
+        height: calc(100vh);
+        width: 100vw;
+        padding: 0;
+    }
+
+    .carousel .slider-wrapper.axis-horizontal .slider {
+        height: 100vh;
+    }
+    .modal-outer {
+        width: calc(100vw - 0rem);
+        height: calc(100vh - 0rem);
+        border-radius: 0;
+        border: none;
+    }
+}

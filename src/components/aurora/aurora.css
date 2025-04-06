@@ -1,0 +1,73 @@
+@import '../../styles/index.css';
+
+:root {
+    --transparent: rgba(0, 0, 0, 0);
+    --white: #ffffff;
+    --black: #000000;
+    --zinc-50: #fafafa;
+    --slate-950: #1e293b;
+  
+    --blue-500: #3b82f6;
+    --blue-300: #60a5fa;
+    --blue-400: #2563eb;
+    --indigo-300: #818cf8;
+    --violet-200: #c4b5fd;
+  }
+  
+  .aurora-background {
+    --white-gradient: repeating-linear-gradient(
+      100deg,
+      var(--white) 0%,
+      var(--white) 7%,
+      var(--transparent) 10%,
+      var(--transparent) 12%,
+      var(--white) 16%
+    );
+    --dark-gradient: repeating-linear-gradient(
+      100deg,
+      var(--black) 0%,
+      var(--black) 7%,
+      var(--transparent) 10%,
+      var(--transparent) 12%,
+      var(--black) 16%
+    );
+    --aurora: repeating-linear-gradient(
+      100deg,
+      var(--blue-500) 10%,
+      var(--indigo-300) 15%,
+      var(--blue-300) 20%,
+      var(--violet-200) 25%,
+      var(--blue-400) 30%
+    );
+    animation: aurora 10s infinite ease-in-out
+  }
+  
+  @keyframes aurora {
+    0% {
+        background-position: 0% 50%, 50% 50%;
+      }
+      50% {
+        background-position: 100% 50%, 50% 50%;
+      }
+      100% {
+        background-position: 0% 50%, 50% 50%;
+      }
+  }
+  
+  .aurora-animation {
+    animation: aurora 10s infinite ease-in-out;
+  }
+  
+  .aurora-overlay {
+    background-color: #06090980;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+  }
+
+  .aurora-content {
+    z-index: 13;
+  }
