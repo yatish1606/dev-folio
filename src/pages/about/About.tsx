@@ -206,7 +206,7 @@ const About = () => {
             </small>
             <small>
               <a
-                href="https://dribbble.com/Yatish1606"
+                href="https://github.com/yatish1606/dev-folio"
                 target="_blank"
                 className="text-gray2"
               >
