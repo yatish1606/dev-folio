@@ -35,8 +35,8 @@ const About = () => {
             development has grown into a fulfilling profession. ✨
           </motion.p>
           <motion.p className="text-gray3" {...childAnimationProps} custom={2}>
-            Since 2021, I’ve had the privilege of working on some of the most
-            cutting-edge digital products and platforms — most notably{" "}
+            I’ve contributed to the architechture and implementation of
+            innovative digital products, including{" "}
             <a
               className="link"
               href="https://www.majesco.com/digital-solutions-insurance-solutions/digital1st-platform/"
@@ -105,7 +105,7 @@ const About = () => {
           </div>
 
           <motion.a
-            href="https://drive.google.com/file/d/1V2MpN3aIOZ4Ere6VPDVwYKyXlCbkpcfx/view?usp=sharing"
+            href="https://drive.google.com/file/d/1nSObXxJCtaZBZFLR-9qYQVr6tdHAb7B1/view"
             target="_blank"
             className="underline"
             {...childAnimationProps}
@@ -113,8 +113,6 @@ const About = () => {
           >
             See complete work history
           </motion.a>
-
-          {/* <div className="section-separator"></div> */}
           <br />
           <br />
           <motion.h5 {...childAnimationProps} custom={8} className="text-gray0">
@@ -192,6 +190,15 @@ const About = () => {
             >
               Dribbble <ArrowUpRight size={14} className="text-gray2" />
             </a>
+            <div className="separator-dot"></div>
+            <a
+              target="_blank"
+              href="https://drive.google.com/file/d/1nSObXxJCtaZBZFLR-9qYQVr6tdHAb7B1/view?usp=sharing"
+              download
+              className="text-gray2"
+            >
+              Download resume <ArrowUpRight size={14} className="text-gray2" />
+            </a>
           </motion.div>
 
           <div className="section-separator"></div>
@@ -221,7 +228,7 @@ const About = () => {
             <small className="text-gray4">Previous versions:</small>
             <small>
               <a
-                href="https://yatishkelkar.netlify.app/"
+                href="https://yatish-portfolio-v1.netlify.app/"
                 target="_blank"
                 className="text-gray1 underline"
               >
@@ -231,7 +238,7 @@ const About = () => {
             <div className="separator-dot"></div>
             <small>
               <a
-                href="https://yatish-dev.netlify.app/"
+                href="https://yatish-portfolio-v2.netlify.app/"
                 target="_blank"
                 className="text-gray1 underline"
               >

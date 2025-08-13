@@ -60,8 +60,8 @@ const Portfolio = () => {
               custom={2}
               className="text-gray2"
             >
-              I'm currently at <span className="link">Morgan Stanley</span>,
-              with 3+ years of experience in building scalable web apps.
+              SDE-2 at <span className="link">Morgan Stanley</span>, with 3+
+              years of experience in building scalable web apps.
               {isMobile ? " " : <br />}I craft engaging digital experiences and
               am open to new software challenges, with a passion for visual
               design.

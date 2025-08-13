@@ -24,6 +24,7 @@
     img {
         object-fit: cover;
         width: 100%;
+        border-radius: var(--radius);
     }
 
     video {
@@ -72,6 +73,14 @@
     gap: 1rem;
     align-items: flex-start;
     border-radius: var(--radius);
+  }
+
+  .bento-child.no-pad .bento-child-image {
+    padding: 0;
+  }
+
+  .bento-child.no-b .bento-child-image{
+    border: none;
   }
 
   .bento-child caption {

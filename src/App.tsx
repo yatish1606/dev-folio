@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import Portfolio from "./pages/portfolio/Portfolio";
-import About from "./pages/about/About";
-import { motion } from "framer-motion";
-import workExperienceList from "./data/work-experience";
-import portfolioData from "./data/portfolio";
-import { playItems } from "./data/play";
+import SFProMedium from "./assets/fonts/SF-Pro-Display-Medium.otf";
+import SFProRegular from "./assets/fonts/SF-Pro-Display-Regular.otf";
+import SFProBold from "./assets/fonts/SF-Pro-Display-Semibold.otf";
+import SFProText from "./assets/fonts/SF-Pro-Text-Light.otf";
+import SFProTextMedium from "./assets/fonts/SF-Pro-Text-Medium.otf";
+import SFProTextRegular from "./assets/fonts/SF-Pro-Text-Regular.otf";
 import crispyHero from "./assets/showcase/crispy/crispy-hero.png";
 import IRCTCHome from "./assets/showcase/irctc/Home.svg";
 import IRCTCHero from "./assets/showcase/irctc/IRCTC Hero.svg";
@@ -24,12 +24,11 @@ import UEICompSwipe from "./assets/showcase/uei/Comp_swipe.svg";
 import UEIDashboard from "./assets/showcase/uei/Dashboard.svg";
 import UEIHero from "./assets/showcase/uei/UEI_Hero.mov";
 import UEIHeroMobile from "./assets/showcase/uei/UEI_hero_mobile.mov";
-import SFProRegular from "./assets/fonts/SF-Pro-Display-Regular.otf";
-import SFProBold from "./assets/fonts/SF-Pro-Display-Semibold.otf";
-import SFProMedium from "./assets/fonts/SF-Pro-Display-Medium.otf";
-import SFProText from "./assets/fonts/SF-Pro-Text-Light.otf";
-import SFProTextMedium from "./assets/fonts/SF-Pro-Text-Medium.otf";
-import SFProTextRegular from "./assets/fonts/SF-Pro-Text-Regular.otf";
+import { playItems } from "./data/play";
+import portfolioData from "./data/portfolio";
+import workExperienceList from "./data/work-experience";
+import About from "./pages/about/About";
+import Portfolio from "./pages/portfolio/Portfolio";
 
 const quotes = [
   "Loading… because good things take time (and a bit of JavaScript).",
@@ -177,17 +176,12 @@ const App = () => {
         className={loading ? "show loader-container" : "hide loader-container"}
       >
         <div className="loader"></div>
-        <motion.p
-          // initial={{ opacity: 0, y: 0 }}
-          // animate={{ opacity: 1, y: 0 }}
-          // transition={{ duration: 0.5, damping: 0.5, delay: 0.25 }}
-          className="large-text text-gray1"
-        >
+        <p className="large-text text-gray1">
           <span
             className="text-gray2"
             dangerouslySetInnerHTML={{ __html: quote }}
           ></span>
-        </motion.p>
+        </p>
       </div>
 
       <Portfolio />

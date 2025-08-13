@@ -8,20 +8,18 @@
 
 // import accordionVideo from "../assets/showcase/accordion/accordion-video.mov";
 
-import crispyThumbnail from "../assets/showcase/crispy/crispy_Thumbnail.jpg";
-
 // import qubedoLogin from "../assets/showcase/qubedo/qubedo-login.png";
 import qubedoThumbnail from "../assets/showcase/qubedo/Qubedo_Thumbnail.png";
 // import qubedoRegister from "../assets/showcase/qubedo/qubedo-register.png";
 
-import ueiThumbnail from "../assets/showcase/uei/UEI_Thumbnail.png";
-
 import { ReactNode } from "react";
 import irctcThumbnail from "../assets/showcase/irctc/IRCTC_Thumbnail.jpg";
-import Crispy from "../showcase/Crispy";
+import moocThumbnsil from "../assets/showcase/mooc/mooc-tribe-thumbnail.jpg";
+import ueiThumbnail from "../assets/showcase/uei/UEI_Thumbnail.png";
 import IRCTC from "../showcase/IRCTC";
-import UEI from "../showcase/UEI";
+import MOOC from "../showcase/MOOC";
 import Qubedo from "../showcase/Qubedo";
+import UEI from "../showcase/UEI";
 
 export interface FeatureSection {
   label: string;
@@ -167,10 +165,23 @@ const portfolioData: ShowcaseGroup = {
       ],
     },
     {
+      longtitle: `<span class="text-gray0 underline"> mooc-tribe</span> helps learners stay on track by making online courses more collaborative and less isolating.`,
+      type: "Product design",
+      label: "mooc-tribe: a collaborative learning tool",
+      id: 1,
+      thumbnailVideo: moocThumbnsil,
+      shortDescription: "Product design & UX Research / 2025",
+      // shortDescription: `<span class="text-gray1">Unified Energy Payments </span> is designed to address the fragmented nature of state electricity apps in India, by offering a single platform for bill payments and consumption tracking.`,
+      startDate: "February 2025",
+      endDate: "April 2025",
+      content: <MOOC />,
+      keywords: ["Figma", "UX research", "Prototyping"],
+    },
+    {
       longtitle: `<span class="text-gray0 underline">Rethinking IRCTC </span> : a case study for improving the usability and flexibility of train bookings`,
       type: "Product design",
       label: "Rethinking IRCTC",
-      id: 1,
+      id: 2,
       thumbnailVideo: irctcThumbnail,
       shortDescription: "Product design & UX research / 2024",
       // shortDescription: `<span class="text-gray1">Unified Energy Payments </span> is designed to address the fragmented nature of state electricity apps in India, by offering a single platform for bill payments and consumption tracking. `,
@@ -179,52 +190,52 @@ const portfolioData: ShowcaseGroup = {
       content: <IRCTC />,
       keywords: ["Figma", "Design systems", "UX research"],
     },
-    {
-      longtitle: `<span class="text-gray0"><code>crispy-player</code></span>  is a simple command line tool that harnesses machine learning to offer real-time video superresolution, enhancing video quality on the fly.`,
-      type: "Development",
-      label: "Building a realtime super-resolution system",
-      id: 2,
-      thumbnailVideo: crispyThumbnail,
-      shortDescription: "Development / 2022",
-      // shortDescription: `<span class="text-gray1">Unified Energy Payments </span> is designed to address the fragmented nature of state electricity apps in India, by offering a single platform for bill payments and consumption tracking. `,
-      startDate: "August 2021",
-      endDate: "January 2022",
-      content: <Crispy />,
-      keywords: [
-        "Machine Learning",
-        "Artificial Intelligence",
-        "Python",
-        "Tensorflow",
-      ],
-      collaborators: [
-        {
-          id: 1,
-          name: "Mahesh Nahak",
-          designation: "Software Engineer @PrincipalGlobal",
-          image:
-            "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBAQEBAVEBAVEBIbEBUVEBcQEA4WIB0iIiAdHx8kKDQsJCYxJx8fLTItMTMuMDAwIys9TT8uNzQ5MDcBCgoKDg0OFRAQFSsdFho3KzcrNysrNy0tKzcyKys3LS8yLi03KzQ3Nys0My8uNystMS8vLSstLSs3LTctKysrK//AABEIAMgAyAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAAAQIDBAUGB//EAD4QAAEEAQEFBQUECAYDAAAAAAEAAgMRBCEFEjFBUQYTInGBIzJhkbEUM0KhB1JicnPB0eEVNJKy8PElY4L/xAAaAQACAwEBAAAAAAAAAAAAAAAAAwECBAUG/8QAIxEAAwACAwACAwEBAQAAAAAAAAECAxESITEEQRMiUXEFFP/aAAwDAQACEQMRAD8A9nQkSpplAoQhAAlSJUBoLQhAQGhUIQoDQJUiVBAIQlUEiJUIQABKkSoLAhCAoA887Q/5ib98rJWrt/8AzE38R31WWOaRRujwSldhCpq9Cl0Nk2MEeA+ZQlwvcPmhZ69Hz4dWhIEWuucMVKktCAHISIUEioQhQSKikoCUIARKlRSgNCISoQGhEJUIDQiEqFAAlSJUEo8529/mJv4jvqswc/NaO2z7eb+K/wCpWfHz80izbHgHiPNXYQqV6hX4Al0Mk2cEezPmhOw/uz5oWavR8+HSWi0y0Wu1o4xJaW1HaW1GgJLRaZvJQVADwnBMBTgoAeEqQJVUkWkKlkbThYSHSNBGh14HoVw+f29dG9wBDgHciDp59VaYbDZ6JaVeVS9umne8b7IFUOB5rU2Z2zYOLi42ALNk87Kl4mg2eglIo4Jg8Ag2pUskRCEIIBKkQgDzbbJ9vN/Fk/3FUWK3tk+1mI495JX+oqhhtIYAeIFFJs24yQjUeav46oVqPNaOM4JVjJNvCHsz5oT8EeA+aFmr0fPhs2i1HaW13DjElpbUQKW1AEoKUFRApwKAJmlPBULSpWlUaAkCxu1m2xh47pLG/wAGNJ94rYBXm36YNo7rIccDVxLia4VoK/NETutAzzzO21NK57i8kvJLvW+HzWc7IJOpsprIi665cVMzC9fRa6uI9LRjqvEQOmKliyi3gdVo7O2Q5x1FDqQk2lsVzDbQSBx0Sf8A1Y3XE0P4eRTyO9/R7nZXewkzmWKQuD2HXcNE2PkvUl4b+jXaQjzIWOIawl4vhqRoCvcQl5VpmYEiCmkpYDktplpbRoDzLbIJfMBoTI/W6/EVThBa2rv1tWNrN3pXdO9cT8yqw4UeFpFGyBve+IHleq1MLWiCKWOQAdFq7OiIuzx5dFS/BknTYPuFIlwfcKFkr00T4aVotJaS13DjDrS2m2hADwU4FMCUFQBKCpGlQgp7SoJJ2leb/pk2c90cGS3VrN5r/wBm6o/kfyXorSsTtxjd7s/KYBZ7uwPi0g/yRL1WwPHdhYgMQceJJW3jY7dKACxsRpbjR6loc590PEaNABQxBzXDuw/U67xFhZfkfs32dX421K6Oolnii1e4NH5p8ObFIK8QDhQc5pDT6qjmbPMjGuYQHV4iVPs3El0D5C4fAgtP5LAnK7+zoOafX0ZfZzZxbtTGic26naSKsEDW/kveLXkW2oXRzY08Z3ZGuokaXWo/mPVesh2g8l05yfkSOF8jE4oeSm2kJTbV9GcfaLTLS2jQHl+0h7c6iw6Q0Rdi/wC6Ihp6pNon27v/AL5fHr6J+NwPmstm6PBrhqPNaeMOCzT7w81pwjglUXRt4R9mfNCMH7s+ZQs9ej58NBFqv9oR9oXc0cLkWQlVYTpe/U6DkWUoVYTpROjiHMtAp7SqomTmzKNE80WwVS2/A6TEyI2e86GQNrma4KYTJwnUOWWVpPZ5FszcMLAQDuuc3UfFQbSymte1rG+FotwGhc5b3aPY7oHSyNZUTpLBB4XypctlxW9r2usEgubzrmLXOyb/ACdnbwUnjfE2sTaYezdERBvi73fqq0mZ9neHRvGp8UYdf/StYO0I2gNjhY11UTul7vPVXZMVjw9zgC9/vGhf5LJTSfhunbn0sxsOTusDS42C0DivRweHLRcL2Oc1sxHRhDfP/q12ffLo/Eh8NnE/6GRfk1/Ca0lqHvUd6tfEwc0ToKgEqUzKHLDkjznNPjf+8fqkxz4T5pMs293mUkMgDCT1WG/TpR4J+Mea1ccrHEoc4EG6K18fql0Xk3sEezPmhJgu9nfJCzV6Onwj3ku8kMLuiO6PRd3Z5/Qu8l3km6eiNw9FOw0PDk5rkwNPROAPRGw0SByeCogFIAo2Gh4cnAplLC292sxsQEOdvy8o2mz6nkp7BI3ciFsjHMeA5rhRBXke1ovs88kY1a17g086tSbQ7TbRzATFcUO8Qe78ND4u/uFnYzS+Ngdq4WDfW1m+Rx0dL4cXL7+yaLa7W8RZ5LRx9sOk0a3d6krG/wAPtwBNLotm4LWirtc3K4Xh18M3Xpp7Cn7pweb0NurUnquxwdpwzAGKRr7FgA6/JcYQGg0uAzcy5t6M7vi8JZbfXzWr4Fuk0Yf+nhnar7Pfd5La8s7J9sckOEUlztvQmzI0efNeiwZ7Hiwa668FveRJ62cp4LS5a6L1pHFMa66PJOPNTsVrs8+yj4ik3C5gquJ0IFFQ7Qlp/Fo1/EVbx/c+a51vs60+FeEHe1aG2RdVr/zVbOOsok7wvqtXGS6Lyb2zj7I+aEYH3Z80LPXo6fDUkyWcmpscjTxCjETeqXuh1XX5HG4on3o+iRxjUJi+KO5KnkHFErO7KmbFGeapthKeIyjkHBFz7PH1SmKMAkkAAam1Vawrku122PajEErY2llzEkB1EGgCdOnzVKvitjcWHnWjM7RdtYZCYopZImbwBexgLi29dTw06BcN2iix2yD7NK6VpbbidaPmqW0GFj3DQUeAdvfnwPpoug7PbKh+zuy52GRgLhugjdbQ4n1oaKt2saV7f+GzHi5N49L/AE5uDLexr2AkNfQeOtGwrWy8ndsOIriLNdBon7U2cWMZkDdbHK5xjj3jvxizQIPHzWfJCQBdU4WKcD8+ivqMk9fZG7x139HZY2MJBa08cAACqK4DE2hPDpHKQOhpw/NWJttZLwWukOp5AM+iwX8G2+n0bo+dCXnZ0PaPbDWMdDGbkIpxHBg/quNhaS40LoE/1UhaQLINXx5EqxsTOMMzJAGkWSQ4WKqltw41hxvj2zDmt5siddI1NhdoG43gMZIIcHPob400rThfX+yrt7SZAcXNmcQTq1xsDy6elK/20y8aVsRxwwU53eUzddZorlWc/NThmbXNrtlc11DU76Ov2d24y2aFzXNAJpwAL/hfVekdmNsszoO8bo9ukrP1D/QrxGXLc5gjoBodYAbqNK4rov0d7XdjZ0Qv2czhHIL08R0PoaTtaRltKntG1kHxOB1px4q3inwepWXHNvuef2nfVaWIfD6rn36bZ8EkGo81o4vBZkvH1Wpi8kuiyN/CIEWvU/VKs0wl9W4hgbYHImzaEpoan0bYSgfFPbECl7n4rYsyMX4ho804X1TXxVzSiM9VP5kR+Icwnqna9UxsZ6pzoyp/Kg/GyPLnMccknHdY51daFrwXP2hJLK+Z7t573EuPHjyXuW1w4Y85/wDTJ/tK8AlIs1dcrTsVKkyOLlksk5eADXhbQrn/AHWlh7aezFfita3deTvl1uJ8hwHJYwKfCdXD4qbxy1pobOSk9/Zd2ttJ+Q5pcA0Nja1oF1pz1VStEjhzXUdnuyssskZkZ7Ata7eumkEdeqpVxikvMXlrZy6mx8d8h3Y2lxomgLNDir/aXCbDPIxvAOI1FfHh5EKhhZb4XtkYac03x4/AqyyO45SQ4U3xo6HL2K5uzA6UljxIXsaTwaaFVy6+q5V2hFcgt1+1sqeB75Hnu45fCQ2/G6zRN6ADh6LBJVPj8ltV/Q+S5enJG8qSCNxa4gEgC3ECw0dSpsTZssrXSMYXsYRvAe87qB6K1mbcc6N0LYooozu2GMpxANizzT3fepM6nrdGcziP60uq2QMZ7G3UMrNQbrfc2iD/AM4+i5SIE8rV/FxHOIJBDN2y6vdF6n5Wl5kmvdaG4Hr63s6DZ8l2f2nfVb+EbaFzGyxulzbunO1XT4fuBZL9GjZhZHmtTHNLLkPiHmtPGKXRKNvHAMQ9fqhMhPsh6/VCW0XT0Wf8RjaacaU/2xlWHaLl86feIMjDp8FLFnsqt2gru56/ons259osHNJHtaM81lxSscRQBHNb+DlYkQIfusceoveC0zMudiOb5aGx5zDwcpDmN/WCpYxxaeeFuJaOgT3RRBhcBYS6nitsdL29L0r9qs1zMKV7f2A6v1S4B35ErxZmZCWOilYTRPcyN0eyz+Icx/fqvU+1e2RHhTlrA4gNFH3SC4A38143ku3nOIaGgkkAcGjomYEqTL5ZrE0n6SysAJaHBwB0I4O+KZjy7rxYsDkeBUbX1odEyZ1OBWrX0I39nWbBbOA18EHe70tSW22kaUL5cTquu2tt2XExAGhskwk3HkbxihJF0fjR4LiMDtRPC0iMiyAD4QeAoH6fJX9n7TycvHmxg9pkDmvaD782p3hfA8W0ublxU65UujpRca4y+zC2pnnIldK4BrnVvbt0T11VGR2is5+I+F+5IC14A3gRRaTrSbsmSMZERl+73vFpa3S0p/Xww2m61Xp0uRB/4bHcOc5LyACTQeB/JYMM0Zxpo3NAlDmvjd+Jw4Ob8tfQrsO0mZhx4s2NFIxllpiY0F1EVd1oLrn1XnEjzdA0k/G3abfXY35GoaXvR1HYTbUWM+Tv94MfW6QLaw62SPjosLahj76Tuvu98lvwHRQONNAUjJY/s7mlvtu9aWu/YrX8wPmtChK3S+zK6bnj/BkLyDY0K03OdCHMcHMkLGjR3hLSCSD8x8kzYjxHId97Y2GN1uoP3dNKA4m60WjtV0Du6nMv2iSSKpAPDuPAaG2OPn6qmSv2010MxzqNp9i7EeSLPquvwj4AuT2XBuUD0afKwDX5rq8H7sLNka30XlPXYyfiPNaWLazpxqP3lp4yXRZGtEfZDzP1QiL7r1KFTRY13YjDoQCq0mzIjYDQrpQVHhUwpNhAe4SFHJs6ShYtdFSUBHIlbObbjO5sV4RSEVu6LZaE7RDbfoLrtI4vtpjlmzsm2akMF9LeF5ljZsLCbjD2FjQxrjfdgAgk0Brevqvc+0MQfizNLN8Fh8N1v/C+S8Vl2J3WWyB0gZ3kfgd+BryCKNjhdj1CdHHi0yyqnSZBn7AcIRkMcJIXHTTdkaLI3i3kLBWBKwkUeI4fELuNsQhuLWO8OqV5e1rvEKHjFXwGmlaBcc+jdlN+PldJtkfJxSmtEcblo7GyRFMyXe3XMO80bu8Hka0dRV8FTz8uOV+/GzuwWtsaVYFWK6qEOT6XOdPrYiHwrrvRqZUs+ZJJMRvu3d6QgU1jRp8llN4ldAzaUk0EWFAwN3j7dzW0ZNdLrkFS7QQshlMLG0GBosnV5oWl47afHWhuWE1y3szXvrVaHZ3Yrsvvi1zWljN7xGgdRf5LGldZoK/hZLoiC0kCwTXOk2+XF8fRGNy7XLwZtGMsIYQQ7dBIIqr1H5Uq7StI4UuU45DnAd7NVk14nHorGZ2WyY63Y3SitSxt6+XFE5JSSb7C8VNtpdGWwcypgr2JsDLkbvMgeWjnu19VWzMV8T3RvaWuaSCFbnLekyn46S20amwZi4EE3RoXyC7LCd4AOi4bs+dXBdficLBWPKv2HQ9rstS2SAOIWji/FUWDmeKvQJLGG3iax+RNoVWCQi9fNCgk6FxQ0BJaUHqqECpLSJUIkWNx56KRo5pqc1ylAyPaDbik/dK8q2zB9pyYYJJDC+O3OeGgsN8CL4nw/XovT9rTFkMj6umnT4c147lxxSucS9zbeXBwf4rPx6an5lTvXexuJbXheyuyWSXNAczJZ3h3rAjkcCbJLvXrzWD2n2LJjyu3oyItAx1hwIqgCRzoLqNjZk0MXdsk3gB4C8X5K5h5ROM/7VIHPe6QSRu91go7u6ADf4daPEpU56iv6jTeBXOjyUtLSQQRXXpyTmO1W9tPBjcHvdI4zAge5useB4Wn5AWueuiQeIXUxZVkXRzMuJ432WIsp7DbHFt8aNWEzIyHO1cbKrl6fBIN4Et3q4DkT8fgr6XuinJta2aGw9kmcyOLgxsbHOkJu2tA41SpzPoFX2vypC9w3h3gp/4WuHSuimh2A51b7vQJLzKW3THLC6lKUVNnZDz3TN4Bsby7UaXXP0C9S2JNLK3wkBl6kOD74HQ6/ELjsTYbBWmoFDyWxh4G5q22nkWmliz5prw24fj3K7Oz2jK2GA3UYNNbZaG2TVLzDacL3ZDXl5kpsbnPHEge8RfQgrqHZEpG46RzgOG8d+tPjal7MdmQ+PKljoTe7AXHwAgWQRwIOgUYL03/AEjNPS34cbsqB0csjHAhwNG11eKDSwsEFrnCQePfO9rwPNdFjNBAorRVbfZj0l4WYlchUEMR6K5GyuIpLJJwBSRPiqifihVJOi3kNHFCEEDGHWlK91aoQhroF6DHg6pS6kIUJEnPduZXiBjmuod4A4fr6FcBTD4gxt8zui0IUZG0ujT8ZJliOYV0UWTmAAkngLQhJxpVXZqy05nowftTpHBryN0uAPhsgH1V89lILvxfPRCFo+VTxNKOtmX4iWZN33os4/ZyAfgHrqrcWxo28GgeQQhZPyXXrNixRPiJm7PA5aKwzFaEqEt0xiWhSxoTO96IQq7L6KeRkUSb5rrezeb3MLI3NonxGzVk66+lfJKhbMSOd8n+HAO8UjzzL3HTzWjAHiqIPnohC0sxl+HKeOLT9VbG0DVUf9JQhUZKLuPO4jQOs/AoQhBJ/9k=",
-        },
-        {
-          id: 2,
-          name: "Gaurav Khairnar",
-          designation: "Software Developer @Uptycs",
-          image:
-            "https://media.licdn.com/dms/image/D4D03AQFZMyKLOM0QtQ/profile-displayphoto-shrink_200_200/0/1704280855963?e=2147483647&v=beta&t=DPGHJbFdhiIUKm3rY2tIwiM9QwrYpB9VtbO9ujG9ik0",
-        },
-        {
-          id: 3,
-          name: "Kshitij Chitnis",
-          designation: "Student",
-          image:
-            "https://media.licdn.com/dms/image/v2/D5603AQHWYObvNAJisQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1724163390958?e=2147483647&v=beta&t=L9tmdwaJp10qL2IyEBrO2sEeP3vyFC1YBkFsGUU7j7w",
-        },
-      ],
-    },
+    // {
+    //   longtitle: `<span class="text-gray0"><code>crispy-player</code></span>  is a simple command line tool that harnesses machine learning to offer real-time video superresolution, enhancing video quality on the fly.`,
+    //   type: "Development",
+    //   label: "Building a realtime super-resolution system",
+    //   id: 3,
+    //   thumbnailVideo: crispyThumbnail,
+    //   shortDescription: "Development / 2022",
+    //   // shortDescription: `<span class="text-gray1">Unified Energy Payments </span> is designed to address the fragmented nature of state electricity apps in India, by offering a single platform for bill payments and consumption tracking. `,
+    //   startDate: "August 2021",
+    //   endDate: "January 2022",
+    //   content: <Crispy />,
+    //   keywords: [
+    //     "Machine Learning",
+    //     "Artificial Intelligence",
+    //     "Python",
+    //     "Tensorflow",
+    //   ],
+    //   collaborators: [
+    //     {
+    //       id: 1,
+    //       name: "Mahesh Nahak",
+    //       designation: "Software Engineer @PrincipalGlobal",
+    //       image:
+    //         "data:image/jpeg;base64,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",
+    //     },
+    //     {
+    //       id: 2,
+    //       name: "Gaurav Khairnar",
+    //       designation: "Software Developer @Uptycs",
+    //       image:
+    //         "https://media.licdn.com/dms/image/D4D03AQFZMyKLOM0QtQ/profile-displayphoto-shrink_200_200/0/1704280855963?e=2147483647&v=beta&t=DPGHJbFdhiIUKm3rY2tIwiM9QwrYpB9VtbO9ujG9ik0",
+    //     },
+    //     {
+    //       id: 3,
+    //       name: "Kshitij Chitnis",
+    //       designation: "Student",
+    //       image:
+    //         "https://media.licdn.com/dms/image/v2/D5603AQHWYObvNAJisQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1724163390958?e=2147483647&v=beta&t=L9tmdwaJp10qL2IyEBrO2sEeP3vyFC1YBkFsGUU7j7w",
+    //     },
+    //   ],
+    // },
     {
       longtitle: `<span class="text-gray0 underline">Qubedo</span> is an in-progress project that helps to transform your design workflow by creating reusable UI components in the cloud - with instant deployment `,
       type: "Hobby project",
       label: "Building a cloud based design system",
-      id: 3,
+      id: 4,
       thumbnailVideo: qubedoThumbnail,
       shortDescription: "Development / 2024",
       // shortDescription: `<span class="text-gray1">Unified Energy Payments </span> is designed to address the fragmented nature of state electricity apps in India, by offering a single platform for bill payments and consumption tracking. `,

@@ -26,20 +26,8 @@ const workExperienceList: WorkExperienceItem[] = [
     currentRoleAtCompany: "Software Engineer",
     type: "FULL TIME",
     isCurrent: true,
-    job: `Contributing to the Wealth Management team as an Associate SDE-2.`,
-    achievements: [
-      { label: "Identified as a top talent for FY 2023", type: "milestone" },
-      {
-        label:
-          "Received the High Five award for excellent client feedback in April 2023.",
-        type: "award",
-      },
-      {
-        label:
-          "Received the Bravo award for commitment and exceptional contribution in April 2024 and July 2023.",
-        type: "award",
-      },
-    ],
+    job: `Contributing to the architecture and implementation of Morgan Stanley’s Wealth Management trading platforms, delivering scalable & high-performance experiences for millions of users.
+    `,
   },
   {
     role: "Senior Software Engineer",
